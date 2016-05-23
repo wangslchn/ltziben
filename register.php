@@ -12,7 +12,7 @@ if ($username == "")
 
 if($password != $password2)
 {
-    exit("密码不同");
+    exit("两次密码输入不同");
 }
 
 $dbhost ="localhost";
