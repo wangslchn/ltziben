@@ -46,4 +46,6 @@ else {
     echo $dbname."连接数据库失败";
 }
 
+mysql_close($connetion);
+
 ?>
