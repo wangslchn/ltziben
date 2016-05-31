@@ -2,12 +2,11 @@
 
 <html>
 <head>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 
 <title>登录页面</title>
-
-
-<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1, maximum-scale=1 minimal-ui, user-scalable=no">
+<meta name="viewport"
+	content="width=device-width,height=device-height,initial-scale=1, maximum-scale=1 minimal-ui, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="default">
 
@@ -17,57 +16,62 @@
 </head>
 
 <body>
-<div class="contents">
-        <img src="/images/logonwx.png" style="width: 166px; text-align:left; border-color: rgb(211, 42, 99);
-            color: inherit; box-sizing: border-box; padding: 0px; margin: 0px;" data-width="90%">
-</div>
+	<div class="contents">
+		<img src="/images/logonwx.png"
+			style="width: 166px; text-align: left; border-color: rgb(211, 42, 99); color: inherit; box-sizing: border-box; padding: 0px; margin: 0px;"
+			data-width="90%">
+	</div>
 
- 
-    
-    
-<form name="login" method ="post" action= "login.php" id ="login" class = "login_from">
 
- <div class="contents">
-        <div class="inputbox fl">
-                                         用户名:  <input name="username" type="text" id="txtusername1" class="inputs" placeholder="用户名/手机号"> </div>
-        <div class="clear">
-        </div>
-    </div>
-    <div class="contents">
-        <div class="inputbox fl">
-                                       密码:    <input name="password" type="password" id="password1" class="inputs" placeholder="密码"></div>
-        <div class="clear">
-        </div>
-    </div>
-    
-    <div class="contents">  
-    
-     <a href="javascript:login_check();" class="dl fl login_btn">立即登录</a>
-     
-        <div style=" display:none">
-        <input type="submit" name="btnSave" value="立即登陆" id="btnSave" class="formdialog pn pnc" /></div>
-      
-        <div class="clear">
-        </div>
-    </div>
-    <div class="contents ter">
-       
-       <table>
-       <tbody><tr><td style="width:100px"> <a class="wjmm fl" href="register.html">立即注册?</a></td><td><a class="wjmm fl" href="forget_pw.html">忘记密码?</a></td></tr>
-       </tbody></table>
+	<form name="login" method="post" action="login.php" id="login"
+		class="login_from">
 
-        <div class="clear"></div>
-       
-    </div>
-     <br>
-        <br> <br>
-        <br>
-         <div class="contents">
-                               全国热线：400-888-8888
-        </div>
-        
+		<div class="contents">
+			<div class="inputbox fl">
+				用户名: <input name="username" type="text" id="txtusername1"
+					class="inputs" placeholder="用户名/手机号">
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="contents">
+			<div class="inputbox fl">
+				密码: <input name="password" type="password" id="password1"
+					class="inputs" placeholder="密码">
+			</div>
+			<div class="clear"></div>
+		</div>
 
-</form>
+		<div class="contents">
+
+			<a href="javascript:login_check();" class="dl fl login_btn">立即登录</a>
+
+			<div style="display: none">
+				<input type="submit" name="btnSave" value="立即登陆" id="btnSave"
+					class="formdialog pn pnc" />
+			</div>
+
+			<div class="clear"></div>
+		</div>
+		<div class="contents ter">
+
+			<table>
+				<tbody>
+					<tr>
+						<td style="width: 100px"><a class="wjmm fl"
+							href="register.html">立即注册?</a></td>
+						<td><a class="wjmm fl" href="forget_pw.html">忘记密码?</a></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="clear"></div>
+
+		</div>
+		<br> <br> <br> <br>
+		<div class="contents">全国热线：400-888-8888</div>
+
+	</form>
 
 </body>
 
@@ -91,7 +95,5 @@
         document.getElementById('btnSave').click();
 
     }
-
-   
 
 </script>
