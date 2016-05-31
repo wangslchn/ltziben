@@ -5,11 +5,64 @@
 <meta charset="UTF-8"> 
 
 <title>登录页面</title>
+
+
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1, maximum-scale=1 minimal-ui, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="default">
+
+<link rel="stylesheet" href="/css/login/lg.css">
+<link rel="stylesheet" href="/css/login/style.css">
+
 </head>
 
 <body>
+<div class="contents">
+        <img src="/images/logonwx.png" style="width: 166px; text-align:left; border-color: rgb(211, 42, 99);
+            color: inherit; box-sizing: border-box; padding: 0px; margin: 0px;" data-width="90%">
+</div>
 
-<form method ="post" action= "login.php">
+ 
+    
+    
+<form name="login" method ="post" action= "login.php" id ="login" class = "login_from">
+
+ <div class="contents">
+        <div class="inputbox fl">
+            <input name="txtusername1" type="text" id="txtusername1" class="inputs" placeholder="用户名/邮箱/手机号"></div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="contents">
+        <div class="inputbox fl">
+            <input name="password1" type="password" id="password1" class="inputs" placeholder="密码"></div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="contents">
+        
+        <a href="javascript:check();" class="dl fl login_btn">立即登陆</a>
+        <div style=" display:none">
+        <input type="submit" name="btnSave" value="立即登陆" id="btnSave" class="formdialog pn pnc"></div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="contents ter">
+       
+       <table>
+       <tbody><tr><td style="width:100px"> <a class="wjmm fl" href="wx_re.aspx">立即注册?</a></td><td><a class="wjmm fl" href="../cpw.aspx">忘记密码?</a></td></tr>
+       </tbody></table>
+
+        <div class="clear"></div>
+       
+    </div>
+     <br>
+        <br> <br>
+        <br>
+         <div class="contents">
+        全国热线：400-888-8888
+        </div>
+        
 <p> 用户名: <input type="text" name="username"></p>
 <p> 登录密码: <input type="password" name="password"></p>
 
