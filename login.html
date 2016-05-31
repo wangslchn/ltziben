@@ -29,28 +29,31 @@
 
  <div class="contents">
         <div class="inputbox fl">
-            <input name="txtusername1" type="text" id="txtusername1" class="inputs" placeholder="用户名/邮箱/手机号"></div>
+                                         用户名:  <input name="username" type="text" id="txtusername1" class="inputs" placeholder="用户名/手机号"> </div>
         <div class="clear">
         </div>
     </div>
     <div class="contents">
         <div class="inputbox fl">
-            <input name="password1" type="password" id="password1" class="inputs" placeholder="密码"></div>
+                                       密码:    <input name="password" type="password" id="password1" class="inputs" placeholder="密码"></div>
         <div class="clear">
         </div>
     </div>
-    <div class="contents">
-        
-        <a href="javascript:check();" class="dl fl login_btn">立即登陆</a>
+    
+    <div class="contents">  
+    
+     <a href="javascript:login_check();" class="dl fl login_btn">立即登录</a>
+     
         <div style=" display:none">
-        <input type="submit" name="btnSave" value="立即登陆" id="btnSave" class="formdialog pn pnc"></div>
+        <input type="submit" name="btnSave" value="立即登陆" id="btnSave" class="formdialog pn pnc" /></div>
+      
         <div class="clear">
         </div>
     </div>
     <div class="contents ter">
        
        <table>
-       <tbody><tr><td style="width:100px"> <a class="wjmm fl" href="wx_re.aspx">立即注册?</a></td><td><a class="wjmm fl" href="../cpw.aspx">忘记密码?</a></td></tr>
+       <tbody><tr><td style="width:100px"> <a class="wjmm fl" href="register.html">立即注册?</a></td><td><a class="wjmm fl" href="forget_pw.html">忘记密码?</a></td></tr>
        </tbody></table>
 
         <div class="clear"></div>
@@ -60,15 +63,35 @@
         <br> <br>
         <br>
          <div class="contents">
-        全国热线：400-888-8888
+                               全国热线：400-888-8888
         </div>
         
-<p> 用户名: <input type="text" name="username"></p>
-<p> 登录密码: <input type="password" name="password"></p>
 
-<input type="submit" value="登录网站"/>
 </form>
 
 </body>
 
 </html>
+
+
+<script type="text/javascript">
+    function login_check() {
+        
+//        alert(document.getElementById("txtusername1").value);
+//        alert(document.getElementById("password1").value);
+        if (document.getElementById("txtusername1").value == '') {
+            alert("用户名不能为空");
+            return false;
+        }
+        else if (document.getElementById("password1").value == '') {
+            alert("密码不能为空");
+            return false;
+
+        }
+        document.getElementById('btnSave').click();
+
+    }
+
+   
+
+</script>
