@@ -4,10 +4,10 @@
 
 <head>
 <meta charset="UTF-8">
-<title>龙腾实业-注册</title>
+<title>忘记密码</title>
 <meta name="description" content="金融贷款">
 <meta name="keywords" content="金融贷款">
-<meta name="apple-mobile-web-app-title" content="注册">
+<meta name="apple-mobile-web-app-title" content="忘记密码">
 
 <meta name="viewport"
 	content="width=device-width,height=device-height,initial-scale=1, maximum-scale=1 minimal-ui, user-scalable=no">
@@ -32,8 +32,8 @@
 	</div>
 
 
-	<form name="regform" method="post" action="register.php"
-		id="register_id" class="register_form">
+	<form name="forgetform" method="post" action="forget_pw.php"
+		id="forget_id" class="forget_form">
 
 		<div class="contents">
 			<div class="inputbox fl">
@@ -58,28 +58,17 @@
 		</div>
 		<div class="contents">
 			<div class="inputbox fl">
-				<input name="passworden" type="password" id="passworden"
-					class="inputs" placeholder="请输入密码" />
+				新密码：<input name="repassword" type="password" id="repassword"
+					class="inputs" placeholder="重新设置密码" />
 			</div>
 			<div class="clear"></div>
 		</div>
+		
 		<div class="contents">
-			<div class="inputbox fl">
-				<input name="txttjphone" type="text" id="txttjphone" class="inputs"
-					placeholder="请输入推荐人手机" />
-			</div>
+			<a href="javascript:check_reg();" class="dl fl login_btn">确定</a>
 			<div class="clear"></div>
 		</div>
-		<div class="contents">
-
-			<a href="javascript:check_reg();" class="dl fl login_btn">立即注册</a>
-			<div class="clear"></div>
-		</div>
-		<div class="contents ter">
-			<a class="wjmm fl" href="login.html">已经有帐号，立即登录?</a>
-
-			<div class="clear"></div>
-		</div>
+		
 
 		<br /> <br />
 		<div class="contents">全国热线：400-8888-8888</div>
@@ -105,15 +94,15 @@ button {
 <script type="text/javascript">
     function check_reg() {
 
-        //alert(document.getElementById("txtphone").value);
-        //alert(document.getElementById("password1").value);
+        //alert(document.getElementById("userphone").value);
+        //alert(document.getElementById("repassword").value);
         if (document.getElementById("userphone").value == '') {
         	weui.alert("手机号不能为空");
             //alert("手机号不能为空");
             return false;
         }
-        else if (document.getElementById("passworden").value == '') {
-        	weui.alert("密码不能为空");
+        else if (document.getElementById("repassword").value == '') {
+        	weui.alert("新密码不能为空");
             //alert("密码不能为空");
             return false;
 
@@ -124,15 +113,9 @@ button {
             return false;
 
         }
-        else if (document.getElementById("txttjphone").value == '') {
-        	weui.alert("请输入推荐人手机");
-            //alert("请输入推荐人ID");
-            return false;
 
-        }
-
-        regform.action = "register.php";
-        regform.submit();
+        forgetform.action = "forget_pw.php";
+        forgetform.submit();
 
 
     }

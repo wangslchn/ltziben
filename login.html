@@ -2,7 +2,8 @@
 
 <html>
 <head>
-<meta charset="UTF-8">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>登录页面</title>
     <meta name="description" content="金融贷款">
@@ -16,6 +17,11 @@
 
 <link rel="stylesheet" href="/css/login/lg.css">
 <link rel="stylesheet" href="/css/login/style.css">
+
+<link rel="stylesheet" href="/css/weui/style/weui.min.css"/> 
+<script type="text/javascript" src="/js/weui.js"></script>
+<script id="jquery_183" type="text/javascript" class="library" src="/js/jquery-1.8.3.min.js"></script>
+
 
 </head>
 
@@ -48,10 +54,13 @@
 
 		<div class="contents">
 
+<!--  
 			<a href="javascript:login_check();" class="dl fl login_btn">立即登录</a>
+-->
+			<a href="javascript:login_check();" class="weui_btn weui_btn_warn">立即登录</a> 
 
 			<div style="display: none">
-				<input type="submit" name="btnSave" value="立即登陆" id="btnSave"
+				<input type="submit" name="btnLogin" value="立即登陆" id="btnLogin"
 					class="formdialog pn pnc" />
 			</div>
 
@@ -80,7 +89,15 @@
 </body>
 
 </html>
-
+<!-- for weui -->
+<style>button{
+	border:1px solid #ccc;
+	cursor:pointer;
+  	display:block;
+  	margin:auto;
+  	position:relative;
+}
+</style>
 
 <script type="text/javascript">
     function login_check() {
@@ -88,15 +105,18 @@
 //        alert(document.getElementById("txtusername1").value);
 //        alert(document.getElementById("password1").value);
         if (document.getElementById("txtusername1").value == '') {
-            alert("用户名不能为空");
+
+        	weui.alert("用户名不能为空");
+            //alert("用户名不能为空");
             return false;
         }
         else if (document.getElementById("password1").value == '') {
-            alert("密码不能为空");
+        	weui.alert("密码不能为空");
+            //alert("密码不能为空");
             return false;
 
         }
-        document.getElementById('btnSave').click();
+        document.getElementById('btnLogin').click();
 
     }
 

@@ -1,16 +1,19 @@
 <?php
 $username = $_POST['userphone'];
 $mobilecode = $_POST['mobilecode'];
-$password = $_POST['passworden'];
-$mobilecode = $_POST['mobilecode'];
-$txttjphone = $_POST['txttjphone'];
+$repassword = $_POST['repassword'];
+
 
 if ($username == "") {
     exit("用户名不能为空");
 }
 
-if ($password != $txttjphone) {
-    exit("两次密码输入不同");
+if ($mobilecode == "") {
+    exit("验证码不能为空");
+}
+
+if ($repassword == "") {
+    exit("输入新的密码");
 }
 
 $dbhost = "localhost";
@@ -23,9 +26,9 @@ mysql_set_charset('utf8', $connetion);
 
 if ($connetion) {
     
-    $password = md5($password);
+    $repassword = md5($repassword);
     mysql_select_db($dbname, $connetion);
-    $dbsql = "INSERT INTO userinfo (UserName,Password,InvitationCode) VALUES('$username','$password','$username' )";
+    $dbsql = "INSERT INTO userinfo (UserName,Password,InvitationCode) VALUES('$username','$repassword','$username' )";
     // exit($dbsql);
     $dbresult = mysql_query($dbsql);
     
